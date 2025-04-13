@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +15,6 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Tambahkan logika submit di sini (misalnya, kirim ke API)
     console.log('Form submitted:', formData);
   };
 
@@ -77,7 +77,7 @@ const LoginForm = () => {
 
         {/* Link Daftar */}
         <div className="text-center mt-2 bg-[#E2FCD9] py-2 rounded-md">
-          <a href="#" className="text-green-500 text-sm font-bold hover:underline">Daftar</a>
+          <Link to={'register'} className="text-green-500 text-sm font-bold hover:underline">Daftar</Link>
         </div>
 
         {/* Separator */}
